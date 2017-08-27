@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystals Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Crystals Collector!</h1>
+          <p class="lead">-You will be given a random number at the start of the game.</p>
+          <p class="lead">-There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+          <p class="lead">-You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+          <p class="lead">-The value of each crystal is hidden from you until you click on it.</p>
+          <p class="lead">-Each time when the game starts, the game will change the values of each crystal.</p>
+          <p class="lead">-Have fun!</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-8" id="random-number">
+            RANDOM NUMBER GOES HERE
+          </div>
+          <div class="col">
+            <div id="wins">Wins:</div>
+            <div id="losses">Losses:</div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container" id="crystal-container">
+          <div class="row">
+            <div class="col-sm"><img src="assets/images/bluecrystal.png" class="rounded float-left" alt="blue crystal img"></div>
+            <div class="col-sm"><img src="assets/images/greencrystal.png" class="rounded float-left" alt="green crystal img"></div>
+            <div class="col-sm"><img src="assets/images/pinkcrystal.png" class="rounded float-left" alt="pink crystal img"></div>
+            <div class="col-sm"><img src="assets/images/purplecrystal.png" class="rounded float-left" alt="purple crystal img"></div>
+      </div>
+    </div> -->
+    <div class="container" id="crystal-container">
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="Crystals">
+                <button type="button" class="btn btn-secondary"><img src="assets/images/bluecrystal.png" class="rounded float-left" alt="blue crystal img"></button>
+                <button type="button" class="btn btn-secondary"><img src="assets/images/greencrystal.png" class="rounded float-left" alt="green crystal img"></button>
+                <button type="button" class="btn btn-secondary"><img src="assets/images/pinkcrystal.png" class="rounded float-left" alt="pink crystal img"></button>
+                <button type="button" class="btn btn-secondary"><img src="assets/images/purplecrystal.png" class="rounded float-left" alt="purple crystal img"></button>
+              </div>
+    </div>
+  </div>
+    <div class="container" id="border-top"> 
+        <div class="row">
+          <div class="col">
+            Your score is:
+          </div>
+        </div>
+    </div>
+    <div class="container" id="border-top">
+        <div class="row">
+          <div class="col">
+            SCORE GOES HERE
+          </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</html>

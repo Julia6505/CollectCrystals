@@ -1,0 +1,40 @@
+.display-3 {
+    background-color: rgb(19, 130, 142);
+    font-family: 'Aclonica', sans-serif;
+    color: #FFAD0D;
+    padding: 16px;
+    padding-bottom: 10px;
+    border: black solid 4px;
+    text-align: center;
+}
+
+.jumbotron, .jumbotron-fluid, .container {
+    background-color: lightcyan;
+}
+
+.col-8, .col {
+    height: 100px;
+}
+
+.col-8 {
+    border-right: white solid 10px;
+}
+
+#crystal-container {
+    padding: 40px;
+    border-top: white solid 10px;
+}
+
+#border-top {
+    border-top: white solid 10px;
+}
+
+.btn {
+    background-color: lightcyan;
+    border: white solid 30px;
+    margin-right: 20px;
+}
+
+.btn-group {
+    margin-left: 130px;
+}
