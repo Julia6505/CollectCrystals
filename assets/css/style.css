@@ -18,6 +18,7 @@
 
 .col-8 {
     border-right: white solid 10px;
+    font-size: 40pt;
 }
 
 #crystal-container {
@@ -37,4 +38,22 @@
 
 .btn-group {
     margin-left: 130px;
+}
+
+#wins, #losses {
+    font-weight: bold;
+    font-size: 18pt;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#printscore {
+    font-size: 40pt;
+    color: orange;
+}
+
+#testclick {
+    height: 40px;
+    padding: 5px;
+    font-size: 14pt;
 }

@@ -66,6 +66,7 @@ $(document).ready(function() {
 
         if (myScore === winningNum) {  
             $("#wins").html("Wins:" + wins++);
+            alert("You win! Play again!");
             console.log(wins);
             myScore = 0;
             reset();
@@ -78,6 +79,7 @@ $(document).ready(function() {
     
         } else if (myScore > winningNum) {
             $("#losses").html("Losses:" + losses++);
+            alert("Aw, you lost! Play again!");
             console.log(losses);
             reset();
             // myScore = 0;
@@ -97,6 +99,7 @@ $(document).ready(function() {
     
         if (myScore === winningNum) {  
             $("#wins").html("Wins:" + wins++);
+            alert("You win! Play again!");
             console.log(wins);
             reset();
             // myScore = 0;
@@ -109,6 +112,7 @@ $(document).ready(function() {
         
         } else if (myScore > winningNum) {
             $("#losses").html("Losses:" + losses++);
+            alert("Aw, you lost! Play again!");
             console.log(losses);
             reset();
             // myScore = 0;
@@ -128,6 +132,7 @@ $(document).ready(function() {
         
         if (myScore === winningNum) {  
             $("#wins").html("Wins:" + wins++);
+            alert("You win! Play again!");
             console.log(wins);
             reset();
             // myScore = 0;
@@ -140,6 +145,7 @@ $(document).ready(function() {
             
         } else if (myScore > winningNum) {
             $("#losses").html("Losses:" + losses++);
+            alert("Aw, you lost! Play again!");
             console.log(losses);
             reset();
             // myScore = 0;
@@ -159,6 +165,7 @@ $(document).ready(function() {
             
         if (myScore === winningNum) {  
             $("#wins").html("Wins:" + wins++);
+            alert("You win! Play again!");
             console.log(wins)
             myScore = 0;
             reset();
@@ -171,6 +178,7 @@ $(document).ready(function() {
                 
         } else if (myScore > winningNum) {
             $("#losses").html("Losses:" + losses++);
+            alert("Aw, you lost! Play again!");
             console.log(losses)
             myScore = 0;
             reset();
