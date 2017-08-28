@@ -19,71 +19,66 @@
 //GLOBAL VARIABLES
 
 $(document).ready(function() {  
+    
+    var randomNumberMain; 
+    var winningNum;
+    var randomNumberCrystalBlue;
+    var randomNumberCrystalGreen;
+    var randomNumberCrystalPink;
+    var randomNumberCrystalPurple;
+    var startGame;
+    var wins = 0;
+    var losses = 0;
+    var myScore = 0;
+    
+    
+    
+    //FUNCTIONS
+    
+    randomNumberMain = function getRandomNumberMain(min, max) {
+        return Math.floor(Math.random() * (120 - 19 +1) ) + 19;
+    };
+    
+    randomNumberCrystals = function getRandomNumberCrystals(min, max) {
+        return Math.floor(Math.random() * (12 - 1 +1) ) + 1;
+    };
+    
+    winningNum = randomNumberMain(19, 120);
+    $("#random-number").html(winningNum);
+    
+    randomNumberCrystalBlue = randomNumberCrystals(1,12);
+    randomNumberCrystalGreen = randomNumberCrystals(1,12);
+    randomNumberCrystalPink = randomNumberCrystals(1,12);
+    randomNumberCrystalPurple = randomNumberCrystals(1,12);
+    
+    
+    $(".btn").on("click",function(){
+        myScore += (randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
+        console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
+        $("#printscore").html(myScore);
 
-var randomNumberMain; 
-var winningNum;
-var randomNumberCrystalBlue;
-var randomNumberCrystalGreen;
-var randomNumberCrystalPink;
-var randomNumberCrystalPurple;
-var startGame;
-var wins = 0;
-var losses = 0;
-var myScore = 0;
-
-
-
-//FUNCTIONS
-
-randomNumberMain = function getRandomNumberMain(min, max) {
-    return Math.floor(Math.random() * (120 - 19 +1) ) + 19;
-};
-
-randomNumberCrystals = function getRandomNumberCrystals(min, max) {
-    return Math.floor(Math.random() * (12 - 1 +1) ) + 1;
-};
-
-winningNum = randomNumberMain(19, 120);
-$("#random-number").html(winningNum);
-
-randomNumberCrystalBlue = randomNumberCrystals(1,12);
-randomNumberCrystalGreen = randomNumberCrystals(1,12);
-randomNumberCrystalPink = randomNumberCrystals(1,12);
-randomNumberCrystalPurple = randomNumberCrystals(1,12);
-
-
-$(".btn").on("click",function(){
-    var buttonValues = [randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple];
-    console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
-    myScore =
-    $("#printscore").html(myScore);
-    if (myScore === winningNum) {  
-        wins++;
-        console.log(wins)
-        myScore = 0;
-        randomNumberCrystalBlue = randomNumberCrystals(1,12);
-        randomNumberCrystalGreen = randomNumberCrystals(1,12);
-        randomNumberCrystalPink = randomNumberCrystals(1,12);
-        randomNumberCrystalPurple = randomNumberCrystals(1,12);
-        winningNum = randomNumberMain (19, 120);
-        $("#random-number").html(winningNum);
-
-    } else if (myScore > winningNum) {
-        losses++;
-        console.log(losses)
-        myScore = 0;
-        randomNumberCrystalBlue = randomNumberCrystals(1,12);
-        randomNumberCrystalGreen = randomNumberCrystals(1,12);
-        randomNumberCrystalPink = randomNumberCrystals(1,12);
-        randomNumberCrystalPurple = randomNumberCrystals(1,12);
-        winningNum = randomNumberMain (19, 120);
-        $("#random-number").html(winningNum);
-    }
-});
-});
-
-
-
-
-
-
+        if (myScore === winningNum) {  
+            wins++;
+            console.log(wins)
+            myScore = 0;
+            randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            randomNumberCrystalPink = randomNumberCrystals(1,12);
+            randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            winningNum = randomNumberMain (19, 120);
+            $("#random-number").html(winningNum);
+    
+        } else if (myScore > winningNum) {
+            losses++;
+            console.log(losses)
+            myScore = 0;
+            randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            randomNumberCrystalPink = randomNumberCrystals(1,12);
+            randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            winningNum = randomNumberMain (19, 120);
+            $("#random-number").html(winningNum);
+        }
+    });
+    });
+    
