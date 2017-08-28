@@ -21,15 +21,15 @@
 $(document).ready(function() {  
 
 var randomNumberMain; 
-var randomNumberCrystalBlue = 0;
-var randomNumberCrystalGreen = 0;
-var randomNumberCrystalPink = 0;
-var randomNumberCrystalPurple = 0;
+var randomNumberCrystalBlue;
+var randomNumberCrystalGreen;
+var randomNumberCrystalPink;
+var randomNumberCrystalPurple;
 var startGame;
 var win = 0;
 var losses = 0;
-var score = 0;
-var myScore;
+var myScore = 0;
+
 
 
 //FUNCTIONS
@@ -38,15 +38,46 @@ randomNumberMain = function getRandomNumberMain(min, max) {
     return Math.floor(Math.random() * (120 - 19 +1) ) + 19;
 };
 
+randomNumberCrystals = function getRandomNumberCrystals(min, max) {
+    return Math.floor(Math.random() * (12 - 1 +1) ) + 1;
+};
+
+
+
+
 $(".btn").on("click",function(){
-      randomNumberMain(19,120);
-      $("#random-number").html(randomNumberMain(19,120));
+    myScore += (randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
+    $("#printscore").html(myScore);
+  });
+  
+
+$("#testclick").on("click",function(){
+    randomNumberCrystalBlue = randomNumberCrystals(1,12);
+    randomNumberCrystalGreen = randomNumberCrystals(1,12);
+    randomNumberCrystalPink = randomNumberCrystals(1,12);
+    randomNumberCrystalPurple = randomNumberCrystals(1,12);
+    randomNumberMain(19,120);
+    $("#random-number").html(randomNumberMain(19,120));
     });
+
+
+// if (i = 0, i < randomNumberMain, i++) {
+
+
+
+
+
+
+// }
+// else if (randomNumberMain === myScore) {}
+// else (randomNumberMain > myScore) 
+
+
+
 });
 
-if (randomNumberMain === myScore) {
 
-}
+
 
 // $(".btn").on('click', function (){
 //     randomNumberMain = function getRandomNumberMain(min, max) {
