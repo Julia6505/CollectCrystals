@@ -27,11 +27,9 @@ $(document).ready(function() {
     var randomNumberCrystalPink;
     var randomNumberCrystalPurple;
     var startGame;
-    var wins = 0;
-    var losses = 0;
+    var wins = 1;
+    var losses = 1;
     var myScore = 0;
-    
-    
     
     //FUNCTIONS
     
@@ -50,35 +48,141 @@ $(document).ready(function() {
     randomNumberCrystalGreen = randomNumberCrystals(1,12);
     randomNumberCrystalPink = randomNumberCrystals(1,12);
     randomNumberCrystalPurple = randomNumberCrystals(1,12);
-    
-    
-    $(".btn").on("click",function(){
-        myScore += (randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
-        console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple);
+     
+    function reset() {
+        myScore = 0;
+        randomNumberCrystalBlue = randomNumberCrystals(1,12);
+        randomNumberCrystalGreen = randomNumberCrystals(1,12);
+        randomNumberCrystalPink = randomNumberCrystals(1,12);
+        randomNumberCrystalPurple = randomNumberCrystals(1,12);
+        winningNum = randomNumberMain (19, 120);
+        $("#random-number").html(winningNum);
+    }
+
+    $("#btn1").on("click",function(){
+        myScore += randomNumberCrystalBlue;
+        console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple)
         $("#printscore").html(myScore);
 
         if (myScore === winningNum) {  
-            wins++;
-            console.log(wins)
+            $("#wins").html("Wins:" + wins++);
+            console.log(wins);
             myScore = 0;
-            randomNumberCrystalBlue = randomNumberCrystals(1,12);
-            randomNumberCrystalGreen = randomNumberCrystals(1,12);
-            randomNumberCrystalPink = randomNumberCrystals(1,12);
-            randomNumberCrystalPurple = randomNumberCrystals(1,12);
-            winningNum = randomNumberMain (19, 120);
-            $("#random-number").html(winningNum);
+            reset();
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
     
         } else if (myScore > winningNum) {
-            losses++;
+            $("#losses").html("Losses:" + losses++);
+            console.log(losses);
+            reset();
+            // myScore = 0;
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+        };
+    });
+
+     $("#btn2").on("click",function(){
+        myScore += randomNumberCrystalGreen;
+        console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple)
+        $("#printscore").html(myScore);
+    
+        if (myScore === winningNum) {  
+            $("#wins").html("Wins:" + wins++);
+            console.log(wins);
+            reset();
+            // myScore = 0;
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+        
+        } else if (myScore > winningNum) {
+            $("#losses").html("Losses:" + losses++);
+            console.log(losses);
+            reset();
+            // myScore = 0;
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+        };
+    });
+
+     $("#btn3").on("click",function(){
+        myScore += randomNumberCrystalPink;
+        console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple)
+            $("#printscore").html(myScore);
+        
+        if (myScore === winningNum) {  
+            $("#wins").html("Wins:" + wins++);
+            console.log(wins);
+            reset();
+            // myScore = 0;
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+            
+        } else if (myScore > winningNum) {
+            $("#losses").html("Losses:" + losses++);
+            console.log(losses);
+            reset();
+            // myScore = 0;
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+        };
+    });
+
+        $("#btn4").on("click",function(){
+            myScore += randomNumberCrystalPurple;
+            console.log(myScore, randomNumberCrystalBlue, randomNumberCrystalGreen, randomNumberCrystalPink, randomNumberCrystalPurple)
+            $("#printscore").html(myScore);
+            
+        if (myScore === winningNum) {  
+            $("#wins").html("Wins:" + wins++);
+            console.log(wins)
+            myScore = 0;
+            reset();
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+                
+        } else if (myScore > winningNum) {
+            $("#losses").html("Losses:" + losses++);
             console.log(losses)
             myScore = 0;
-            randomNumberCrystalBlue = randomNumberCrystals(1,12);
-            randomNumberCrystalGreen = randomNumberCrystals(1,12);
-            randomNumberCrystalPink = randomNumberCrystals(1,12);
-            randomNumberCrystalPurple = randomNumberCrystals(1,12);
-            winningNum = randomNumberMain (19, 120);
-            $("#random-number").html(winningNum);
-        }
-    });
-    });
+            reset();
+            // randomNumberCrystalBlue = randomNumberCrystals(1,12);
+            // randomNumberCrystalGreen = randomNumberCrystals(1,12);
+            // randomNumberCrystalPink = randomNumberCrystals(1,12);
+            // randomNumberCrystalPurple = randomNumberCrystals(1,12);
+            // winningNum = randomNumberMain (19, 120);
+            // $("#random-number").html(winningNum);
+        };
+    }); 
+}); 
+   
+    
     
